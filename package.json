@@ -1,0 +1,38 @@
+{
+  "name": "torrenter",
+  "version": "1.0.0",
+  "description": "Simple nodejs package to download torrents using torrent-indexer and webtorrent, especially movie and series.",
+  "repository": "https://github.com/sayem314/torrenter.git",
+  "keywords": [
+    "torrent",
+    "search",
+    "download",
+    "movie",
+    "series",
+    "tv"
+  ],
+  "main": "torrenter.js",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "author": "Sayem Chowdhury",
+  "license": "MIT",
+  "bin": {
+    "torrenter": "./torrenter.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "cloudscraper": "^4.5.0",
+    "colors": "^1.4.0",
+    "lodash": "^4.17.15",
+    "prompts": "^2.3.0",
+    "request": "^2.88.0",
+    "signale": "^1.4.0",
+    "single-line-log": "^1.1.2",
+    "torrent-indexer": "^1.1.0",
+    "update-notifier": "^4.0.0",
+    "url-regex": "^5.0.0",
+    "webtorrent": "^0.107.17"
+  },
+  "devDependencies": {}
+}
