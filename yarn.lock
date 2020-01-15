@@ -1928,10 +1928,10 @@ torrent-discovery@^9.1.1:
     debug "^4.0.0"
     run-parallel "^1.1.2"
 
-torrent-indexer@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/torrent-indexer/-/torrent-indexer-1.1.0.tgz#b9ee5dfa319355ecd5e4065351e0b0fefa156ec4"
-  integrity sha512-/06zJ0191IHwXQV5YyhnzQcq865+6jCX1IrHBrIAYvmyk3j10ftvaJGM6TZK9iODPMBJ3nUR52QOq22CowzRSg==
+torrent-indexer@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/torrent-indexer/-/torrent-indexer-1.1.1.tgz#3e08edf67f37d181de84e47444c8cd5d839e4bfb"
+  integrity sha512-ZiugU/RnXpDUZIJ3ycNZUxpjPvfxN31/q4zJ7AB37IsUebfxw6gtQRHpI6FgB/wVnmlmo0lZEY4tWG4HYb1mjA==
   dependencies:
     axios "^0.19.1"
     cheerio "^1.0.0-rc.3"

@@ -29,7 +29,7 @@
     "request": "^2.88.0",
     "signale": "^1.4.0",
     "single-line-log": "^1.1.2",
-    "torrent-indexer": "^1.1.0",
+    "torrent-indexer": "^1.1.1",
     "update-notifier": "^4.0.0",
     "url-regex": "^5.0.0",
     "webtorrent": "^0.107.17"
