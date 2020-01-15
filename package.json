@@ -24,6 +24,7 @@
     "cheerio": "^1.0.0-rc.3",
     "cloudscraper": "^4.5.0",
     "colors": "^1.4.0",
+    "env-paths": "^2.2.0",
     "lodash": "^4.17.15",
     "prompts": "^2.3.0",
     "request": "^2.88.0",

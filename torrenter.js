@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const cloudscraper = require("cloudscraper");
+const torrentIndexer = require("./indexer");
 const download = require("./download");
 const isUrl = require("url-regex");
 const signale = require("signale");
@@ -12,10 +13,6 @@ const updateNotifier = require("update-notifier");
 const pkg = require("./package.json");
 
 updateNotifier({ pkg, updateCheckInterval: 1000 * 60 * 60 * 24 }).notify();
-
-// torrent-indexer api
-const TorrentIndexer = require("torrent-indexer");
-const torrentIndexer = new TorrentIndexer();
 
 const onCancel = prompt => {
   signale.info("Aborted!");
