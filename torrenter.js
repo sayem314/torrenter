@@ -113,9 +113,6 @@ const torrenter = async (query, path = "downloads") => {
 
     const downloads = await download(link, path);
     signale.success("File saved in " + colors.cyan(downloads.path));
-    downloads.files.map(i => {
-      console.log(colors.gray(" ├── " + i.path));
-    });
     return downloads;
   } catch (error) {
     signale.fatal(error);
@@ -125,7 +122,9 @@ const torrenter = async (query, path = "downloads") => {
 if (require.main === module) {
   // App info
   console.log(
-    colors.cyan("╔══════════════════════════════════════════════════════════╗")
+    colors.cyan(
+      "\n╔══════════════════════════════════════════════════════════╗"
+    )
   );
   console.log(
     colors.cyan("║") +
@@ -153,9 +152,7 @@ if (require.main === module) {
       colors.cyan("║")
   );
   console.log(
-    colors.cyan(
-      "╚══════════════════════════════════════════════════════════╝\n"
-    )
+    colors.cyan("╚══════════════════════════════════════════════════════════╝")
   );
 
   // CLI

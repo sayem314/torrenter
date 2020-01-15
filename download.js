@@ -4,7 +4,7 @@ const log = require("single-line-log").stdout;
 const { orderBy } = require("lodash");
 
 const _formatBytes = bytes => {
-  if (bytes < 1024) return bytes + "B";
+  if (bytes < 1024) return bytes + " Bytes";
   else if (bytes < 1048576) return (bytes / 1024).toFixed(2) + " KB";
   else return (bytes / 1048576).toFixed(2) + " MB";
 };
@@ -87,7 +87,7 @@ const download = (torrentId, downloadPath) => {
     torrent.on("metadata", () => {
       console.log("\n " + torrent.name);
       torrent.files.forEach(file => {
-        console.log(" ├── " + file.name);
+        console.log(` ├── ${file.name} (${_formatBytes(file.length)})`);
       });
     });
 
