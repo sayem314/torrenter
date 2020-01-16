@@ -9,10 +9,9 @@ const { prompt } = require("prompts");
 const { orderBy } = require("lodash");
 
 // check and notify about update every 24hrs
-const updateNotifier = require("update-notifier");
+const updateCheck = require("./updateCheck");
 const pkg = require("./package.json");
-
-updateNotifier({ pkg, updateCheckInterval: 1000 * 60 * 60 * 24 }).notify();
+updateCheck(pkg);
 
 const onCancel = prompt => {
   signale.info("Aborted!");

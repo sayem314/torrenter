@@ -31,7 +31,7 @@
     "signale": "^1.4.0",
     "single-line-log": "^1.1.2",
     "torrent-indexer": "^1.1.1",
-    "update-notifier": "^4.0.0",
+    "update-check": "^1.5.3",
     "url-regex": "^5.0.0",
     "webtorrent": "^0.107.17"
   },
