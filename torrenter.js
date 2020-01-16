@@ -68,23 +68,30 @@ const torrenter = async (query, path = "downloads") => {
             name: "torrent",
             message: "Select a torrent:",
             choices: torrents.map(item => {
-              item.description = colors.yellow(
-                Object.keys(item)
-                  .map(key => {
-                    if (key == "link" && item[key].length > 60) {
-                      return `${key}: ${item[key]
-                        .toString()
-                        .substring(0, 55)}...`;
-                    }
-                    return `${key}: ${item[key]}`;
-                  })
-                  .join("\n")
+              item.description = colors.brightYellow(
+                "\n" +
+                  Object.keys(item)
+                    .map(key => {
+                      if (key == "link" && item[key].length > 60) {
+                        return `${key}: ${item[key]
+                          .toString()
+                          .substring(0, 55)}...`;
+                      }
+                      return `${key}: ${item[key]}`;
+                    })
+                    .join("\n") +
+                  "\n"
               );
               item.value = item;
               item.title =
                 item.fileName.length > 75
                   ? `${item.fileName.substring(0, 70)}...`
                   : item.fileName;
+              item.title += colors.yellow(
+                `\n    ╚ Size: ${item.size}, Seeders: ${
+                  item.seeders
+                }, Verified: ${item.verified || "unknown"}`
+              );
               return item;
             }),
             initial: 0
