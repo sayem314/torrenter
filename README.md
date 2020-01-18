@@ -2,6 +2,8 @@
 
 Simple nodejs package to download torrents using torrent-indexer and webtorrent, especially movie and series.
 
+![](https://giant.gfycat.com/LiquidDisguisedAoudad.gif)
+
 ## Install
 
 ```console
@@ -13,12 +15,6 @@ $ yarn global add torrenter
 run `torrenter` to start
 
 Pre-built binary [here](https://github.com/sayem314/torrenter/releases)
-
-### Screenshots
-
-![](https://github.com/sayem314/torrenter/raw/master/screenshot1.png)
-![](https://github.com/sayem314/torrenter/raw/master/screenshot2.png)
-![](https://github.com/sayem314/torrenter/raw/master/screenshot3.png)
 
 ## Donations
 
