@@ -38,7 +38,7 @@ package_installer() {
 # install nodejs, npm and yarn
 if [[ $OS == 'Android' ]]; then
   pkg update
-  package_installer "pkg install"
+  pkg install git nodejs -y
   # install torrenter
   npm i -g torrenter
 else
@@ -116,9 +116,12 @@ else
   yarn global add torrenter
 fi
 
+# fix config directory
+cd ~/
+mkdir -p .config
+
 # fix android downloads
 if [[ $OS == 'Android' ]]; then
-  cd ~/
   [ -d storage ] || termux-setup-storage
   node /data/data/com.termux/files/usr/lib/node_modules/torrenter/indexer.js
   if ! grep -q termux .config/torrenter-config.json; then
