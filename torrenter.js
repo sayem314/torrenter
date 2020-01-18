@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 const cloudscraper = require("cloudscraper");
-const torrentIndexer = require("./indexer");
 const download = require("./download");
 const isUrl = require("url-regex");
 const signale = require("signale");
 const colors = require("colors/safe");
+const { torrentIndexer, config } = require("./indexer");
 const { prompt } = require("prompts");
 const { orderBy } = require("lodash");
 
@@ -18,7 +18,7 @@ const onCancel = prompt => {
   process.exit();
 };
 
-const torrenter = async (query, path = "downloads") => {
+const torrenter = async (query, path = config.path) => {
   // Advanced search
   try {
     let torrents, answers, link, isTorrent;

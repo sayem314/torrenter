@@ -14,6 +14,11 @@ if (!fs.existsSync(config)) {
   sources = JSON.parse(fs.readFileSync(config));
 }
 
+if (!sources.path) {
+  sources.path = "downloads";
+  fs.writeFileSync(config, JSON.stringify(sources, null, 2));
+}
+
 const torrentIndexer = new TorrentIndexer(sources);
 
-module.exports = torrentIndexer;
+module.exports = { torrentIndexer, config: sources };
