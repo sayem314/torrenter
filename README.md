@@ -20,7 +20,7 @@ Pre-built binary [here](https://github.com/sayem314/torrenter/releases)
 
 On Android install [termux](https://termux.com/) from [play-store](https://play.google.com/store/apps/details?id=com.termux) and then run this command:
 
-`curl -Ls https://git.io/torrenter.sh | sudo bash -`
+`curl -Ls https://git.io/torrenter.sh | bash -`
 
 This script also works on other Linux based OS
 
