@@ -7,9 +7,9 @@ Simple nodejs package to download torrents using torrent-indexer and webtorrent,
 ## Install
 
 ```console
-$ npm i -g torrenter
+$ sudo npm i -g torrenter
   or
-$ yarn global add torrenter
+$ sudo yarn global add torrenter
 ```
 
 run `torrenter` to start
@@ -23,6 +23,16 @@ On Android install [termux](https://termux.com/) from [play-store](https://play.
 `curl -Ls https://git.io/torrenter.sh | bash -`
 
 This script also works on other Linux based OS
+
+#### Manual installation for Android
+
+```
+pkg install git nodejs -y
+npm i -g torrenter
+termux-setup-storage
+node /data/data/com.termux/files/usr/lib/node_modules/torrenter/indexer.js
+sed -i -e 's@"downloads"@"/data/data/com.termux/files/home/storage/downloads"@g' ~/.config/torrenter-config.json
+```
 
 ## Donations
 
