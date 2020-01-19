@@ -13,14 +13,14 @@ const updateCheck = async (pkg, hrs) => {
         );
         console.log(
           colors.cyan("║            ") +
-            `Update available ${colors.brightRed(
+            `Update available ${colors.red(
               pkg.version
             )} \u2192  ${colors.brightGreen(update.latest)}` +
             colors.cyan("               ║")
         );
         console.log(
           colors.cyan("║            ") +
-            `Run ${colors.brightBlue("npm -i g torrenter")} to update` +
+            `Run ${colors.brightBlue("npm i -g " + pkg.name)} to update` +
             colors.cyan("              ║")
         );
         console.log(
