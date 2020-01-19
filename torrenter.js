@@ -110,8 +110,13 @@ const torrenter = async (query, path = config.path) => {
     }
 
     if (isUrl({ exact: true }).test(link)) {
-      let { body } = await cloudscraper.get(link);
-      link = body;
+      if (link.includes("itorrents.org/torrent/")) {
+        let hash = link.match(/torrent\/(.*?)\.torrent/);
+        link = hash[1];
+      } else {
+        let { body } = await cloudscraper.get(link);
+        link = body;
+      }
     }
 
     const downloads = await download(link, path);
