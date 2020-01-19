@@ -1,4 +1,4 @@
-const colors = require("colors");
+const colors = require("colors/safe");
 const checkForUpdate = require("update-check");
 
 const updateCheck = async (pkg, hrs) => {

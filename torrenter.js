@@ -127,6 +127,7 @@ const torrenter = async (query, path = config.path) => {
   }
 };
 
+// check if using cli
 if (require.main === module) {
   // App info
   console.log(
@@ -165,7 +166,7 @@ if (require.main === module) {
 
   // CLI
   const args = process.argv.slice(2);
-  torrenter(args[0]);
+  torrenter(args.join(" "));
 } else {
   // Module
   module.exports = torrenter;
