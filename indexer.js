@@ -15,12 +15,9 @@ try {
     sources = JSON.parse(fs.readFileSync(config));
   }
 } catch (e) {
-  fs.mkdirSync(
-    config
-      .split("/")
-      .pop()
-      .join("/")
-  );
+  fs.mkdirSync(config.replace("torrenter-config.json", ""), {
+    recursive: true
+  });
 }
 
 if (!sources.path) {
