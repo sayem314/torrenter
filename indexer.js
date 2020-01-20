@@ -1,9 +1,11 @@
 const fs = require("fs");
+const path = require("path");
 const envPaths = require("env-paths");
 const TorrentIndexer = require("torrent-indexer");
 const indexerSources = require("torrent-indexer/src/config.json");
 
-const { config } = envPaths("torrenter", { suffix: "config.json" });
+const systemPaths = envPaths("torrenter");
+const config = path.join(systemPaths.config, "config.json");
 let sources = {};
 
 try {
@@ -15,7 +17,8 @@ try {
     sources = JSON.parse(fs.readFileSync(config));
   }
 } catch (e) {
-  fs.mkdirSync(config.replace("torrenter-config.json", ""), {
+  sources = indexerSources;
+  fs.mkdirSync(systemPaths.config, {
     recursive: true
   });
 }
