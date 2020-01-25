@@ -31,7 +31,7 @@ pkg install git nodejs -y
 npm i -g torrenter
 termux-setup-storage
 node /data/data/com.termux/files/usr/lib/node_modules/torrenter/indexer.js
-sed -i -e 's@"downloads"@"/data/data/com.termux/files/home/storage/downloads"@g' ~/.config/torrenter-config.json
+sed -i -e 's@"downloads"@"/data/data/com.termux/files/home/storage/downloads"@g' ~/.config/torrenter-nodejs/config.json
 ```
 
 ## Donations

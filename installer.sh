@@ -124,8 +124,8 @@ mkdir -p .config
 if [[ $OS == 'Android' ]]; then
   [ -d storage ] || termux-setup-storage
   node /data/data/com.termux/files/usr/lib/node_modules/torrenter/indexer.js
-  if ! grep -q termux .config/torrenter-config.json; then
-    sed -i -e 's@downloads@/data/data/com.termux/files/home/storage/downloads@g' .config/torrenter-config.json
+  if ! grep -q termux .config/torrenter-nodejs/config.json; then
+    sed -i -e 's@downloads@/data/data/com.termux/files/home/storage/downloads@g' .config/torrenter-nodejs/config.json
   fi
 fi
 

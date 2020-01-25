@@ -24,7 +24,11 @@ try {
 }
 
 if (!sources.path) {
-  sources.path = "downloads";
+  if (process.env.HOME == "/data/data/com.termux/files/home") {
+    sources.path = "/data/data/com.termux/files/home/storage/downloads";
+  } else {
+    sources.path = "downloads";
+  }
   fs.writeFileSync(config, JSON.stringify(sources, null, 2));
 }
 
