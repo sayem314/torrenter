@@ -16,23 +16,17 @@ run `torrenter` to start
 
 Pre-built binary [here](https://github.com/sayem314/torrenter/releases)
 
-#### Linux & Android Automatic Installer
+#### Linux & Android Installer
 
 On Android install [termux](https://termux.com/) from [play-store](https://play.google.com/store/apps/details?id=com.termux) and then run this command:
+
+`pkg install git nodejs -y; npm i -g torrenter; termux-setup-storage`
+
+On linux based OS run this command:
 
 `curl -Ls https://git.io/torrenter.sh | bash -`
 
 This script also works on other Linux based OS
-
-#### Manual installation for Android
-
-```
-pkg install git nodejs -y
-npm i -g torrenter
-termux-setup-storage
-node /data/data/com.termux/files/usr/lib/node_modules/torrenter/indexer.js
-sed -i -e 's@"downloads"@"/data/data/com.termux/files/home/storage/downloads"@g' ~/.config/torrenter-nodejs/config.json
-```
 
 ## Donations
 
