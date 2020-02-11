@@ -52,8 +52,22 @@ const torrenter = async (query, path = config.path) => {
 
     if (!isTorrent) {
       console.log("");
+      let { type } = await prompt({
+        type: "select",
+        name: "type",
+        message: "Select type",
+        choices: [
+          { title: "All", value: "all" },
+          { title: "Movie", value: "movie" },
+          { title: "Series", value: "series" },
+          { title: "Anime", value: "anime" },
+          { title: "Music", value: "music" }
+        ],
+        initial: 0
+      });
+
       signale.await(`Searching for ${query}`);
-      data = await torrentIndexer.search(query);
+      data = await torrentIndexer.search(query, type);
 
       // orderBy seed and quality
       torrents = orderBy(
