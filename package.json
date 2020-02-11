@@ -39,7 +39,6 @@
     "torrenter": "./torrenter.js"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
     "cloudscraper": "^4.5.0",
     "colors": "^1.4.0",
     "env-paths": "^2.2.0",
@@ -48,7 +47,7 @@
     "request": "^2.88.0",
     "signale": "^1.4.0",
     "single-line-log": "^1.1.2",
-    "torrent-indexer": "^1.1.1",
+    "torrent-indexer": "^1.1.2",
     "update-check": "^1.5.3",
     "url-regex": "^5.0.0",
     "webtorrent": "^0.107.17"
