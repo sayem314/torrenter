@@ -13,6 +13,8 @@ const updateCheck = require("./updateCheck");
 const pkg = require("./package.json");
 updateCheck(pkg);
 
+let isCli = true;
+
 const onCancel = prompt => {
   signale.info("Aborted!");
   process.exit();
@@ -29,7 +31,7 @@ const torrenter = async (query, path = config.path) => {
           {
             type: "text",
             name: "value",
-            message: "Search torrent:",
+            message: "Search, magnet or url:",
             validate: q => (q ? true : false)
           }
         ],
@@ -59,7 +61,12 @@ const torrenter = async (query, path = config.path) => {
         ["score", "resolution", "seeders"],
         ["desc", "desc", "desc"]
       );
-      signale.info(`Found ${data.length} torrents\n`);
+      signale.info(`Found ${torrents.length} torrents\n`);
+
+      if (torrents.length < 1) {
+        if (isCli) torrenter();
+        return;
+      }
 
       answers = await prompt(
         [
@@ -121,9 +128,11 @@ const torrenter = async (query, path = config.path) => {
 
     const downloads = await download(link, path);
     signale.success("File saved in " + colors.cyan(downloads.path));
+    if (isCli) torrenter();
     return downloads;
   } catch (error) {
     signale.fatal(error);
+    if (isCli) torrenter();
   }
 };
 
@@ -169,5 +178,6 @@ if (require.main === module) {
   torrenter(args.join(" "));
 } else {
   // Module
+  isCli = false;
   module.exports = torrenter;
 }
