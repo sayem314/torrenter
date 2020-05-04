@@ -1,6 +1,6 @@
 {
   "name": "torrenter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple nodejs package to download torrents using torrent-indexer and webtorrent, especially movies, series, anime and music.",
   "repository": "https://github.com/sayem314/torrenter.git",
   "keywords": [
