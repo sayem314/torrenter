@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const cloudscraper = require("cloudscraper");
+const got = require("hooman");
 const download = require("./download");
 const isUrl = require("url-regex");
 const signale = require("signale");
@@ -135,7 +135,7 @@ const torrenter = async (query, path = config.path) => {
         let hash = link.match(/torrent\/(.*?)\.torrent/);
         link = hash[1];
       } else {
-        let { body } = await cloudscraper.get(link);
+        let { body } = await got(link);
         link = body;
       }
     }

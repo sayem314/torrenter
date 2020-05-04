@@ -39,12 +39,11 @@
     "torrenter": "./torrenter.js"
   },
   "dependencies": {
-    "cloudscraper": "^4.5.0",
     "colors": "^1.4.0",
     "env-paths": "^2.2.0",
+    "hooman": "^1.0.0",
     "lodash": "^4.17.15",
     "prompts": "^2.3.2",
-    "request": "^2.88.2",
     "signale": "^1.4.0",
     "single-line-log": "^1.1.2",
     "torrent-indexer": "^1.2.1",
