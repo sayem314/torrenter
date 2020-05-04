@@ -4,7 +4,7 @@ set -ex
 ## remove build directory
 rm -rf build
 
-## build for both 32 and 64bit
+## build for 64bit
 pkg --out-path build package.json --targets \
 node12-linux-x64,\
 node12-alpine-x64,\
