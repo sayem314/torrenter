@@ -6,10 +6,10 @@ rm -rf build
 
 ## build for 64bit
 pkg --out-path build package.json --targets \
-node12-linux-x64,\
-node12-alpine-x64,\
-node12-win-x64,\
-node12-macos-x64
+node14-linux-x64,\
+node14-alpine-x64,\
+node14-win-x64,\
+node14-macos-x64
 
 ## archive builds
 cd build
