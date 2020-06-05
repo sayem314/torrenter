@@ -41,7 +41,8 @@
   "dependencies": {
     "colors": "^1.4.0",
     "env-paths": "^2.2.0",
-    "hooman": "^1.0.0",
+    "got": "^11.2.0",
+    "hooman": "^1.2.5",
     "lodash": "^4.17.15",
     "prompts": "^2.3.2",
     "signale": "^1.4.0",
@@ -49,7 +50,7 @@
     "torrent-indexer": "^1.2.1",
     "update-check": "^1.5.4",
     "url-regex": "^5.0.0",
-    "webtorrent": "^0.108.1"
+    "webtorrent": "^0.108.6"
   },
   "devDependencies": {}
 }
